@@ -78,6 +78,8 @@
     /**
      * Represent the minimum differences between formants, to ensure they are
      * properly spaced
+     * 
+     * I'm not sure if this is possible. Sometimes the formants, especially the second and third formants--merge together for a little bit. (Find source.)
      *
      * @const
      *
