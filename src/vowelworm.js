@@ -42,6 +42,8 @@
      * 2014, 2:52 PM UTC) and Cory Robinson's chart (personal email)
      *
      * These indicate the minimum values in Hz in which we should find our formants
+	 * 
+	 * TODO get better documentation (wikipedia's not the most reliable of sources, and I don't know if anyone who's still here has access to that email)
      */
 
     /**
@@ -80,6 +82,7 @@
      * properly spaced
      * 
      * I'm not sure if this is possible. Sometimes the formants, especially the second and third formants--merge together for a little bit. (Find source.)
+	 * If it's possible/reasonable, we might want to look at the beginning and end of the formants to see if it's one or two formants.
      *
      * @const
      *
