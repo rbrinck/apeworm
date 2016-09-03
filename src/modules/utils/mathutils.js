@@ -179,13 +179,33 @@
     };
 
 	MathUtils.xFormantToPixel = function(xform){
-		var newX = ((-0.32*xform)+677.78);
-		return newX;
+		var newX = ((-0.0012*xform)+3.5821);
+		
+		var xStart = -1.5; //game.x1
+        var xEnd = 3.0; //game.x2
+		var xWidth = 700; //game.width
+		var xMargin = 50; //game.margin
+
+        var xDist = xWidth/(xEnd-xStart);
+
+        var changedX = (newX-xStart)*xDist + xMargin;
+		
+		return changedX;
 	};
 	
 	MathUtils.yFormantToPixel = function(yform){
-		var newY = ((0.65*yform)+94.27);
-		return newY;
+		var newY = ((-0.0053*yform)+4.7812);
+		
+        var yStart = -0.5; //game.y1
+        var yEnd = 2.5; //game.y2
+		var yLength = 500; //game.length
+		var yMargin = 50; //game.margin
+		
+		var yDist = yLength/(yEnd-yStart);
+		
+        var changedY = yLength-(newY-yStart)*yDist + yMargin;
+		
+		return changedY;
 	};
 	
 }(window.numeric));
